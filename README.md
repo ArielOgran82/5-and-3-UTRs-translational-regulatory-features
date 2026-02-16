@@ -1,64 +1,119 @@
-# 5-and-3-UTRs-translational-regulatory-features
-UTR analysis of translational regulation using classification and regression modeling
+# UTR Sequence Architecture Encodes Translational Regulatory States
 
-# UTR k-mer Architecture and Translational Regulation
+## Overview
 
-This repository contains the complete computational analysis pipeline used to investigate whether translational regulation is encoded directly in untranslated region (UTR) sequence architecture.
+This repository contains the complete computational workflow used to identify regulatory features and cis-regulatory elements encoded within untranslated region (UTR) sequence architecture that contribute to translational control.
 
-The study evaluates the predictive and explanatory power of k-mer composition within:
+We systematically test whether short nucleotide motifs (k-mers) and regulatory features derived from:
 
-- 5′UTRs
-- 3′UTRs
-- Combined 5′ + 3′ UTR architecture
+- 5′ UTR sequences  
+- 3′ UTR sequences  
+- Combined 5′ + 3′ UTR architecture  
 
-using machine learning–based classification and regression frameworks.
+are sufficient to identify and rank sequence-derived regulatory features according to their relative contribution to translational regulation.
 
----
-
-## Scientific Objective
-
-Translational control is a central layer of gene expression regulation. While many regulatory elements have been characterized, it remains unclear how much regulatory information is directly encoded in primary nucleotide composition.
-
-This project tests whether short sequence motifs (k-mers), without additional engineered regulatory annotations, are sufficient to:
-
-- Distinguish translational states
-- Predict quantitative translational efficiency (ΔTE)
-- Reveal region-specific versus integrated regulatory architectures
-- Detect bimodal regulatory structure
-
-By restricting features to k-mer composition, this analysis isolates the intrinsic regulatory signal embedded in UTR sequence architecture.
+The analysis is implemented as a fully reproducible Jupyter notebook.
 
 ---
 
-## Contents
+## Scientific Rationale
 
-- Reproducible Jupyter notebook containing the full analysis workflow
-- Input dataset(s) used for modeling
-- Machine learning implementation (classification and regression)
-- k-mer feature extraction pipeline
-- Environment specification for reproducibility
+Cis-regulatory elements within 5′ and 3′ untranslated regions (UTRs) are critical for controlling mRNA translation efficiency (TE), yet their coordinated functions remain poorly understood due to their complexity and variability.
+
+Here, we combined polysome profiling with TIF-seq2 to determine the translational efficiency (TE) of transcript isoforms (TIFs) with precisely defined 5′ and 3′ ends. We extracted regulatory features, positional k-mers, secondary structure characteristics, and TE measurements to construct a multifaceted input space for machine learning (ML) modeling.
+
+Together, these findings expand the understanding of translation regulation and suggest that UTR regulatory features evolve primarily to fine-tune an inherently robust translation machinery to achieve balanced protein expression.
+
+---
+
+## Analytical Framework
+
+### 1. Regulatory Feature and k-mer Extraction
+
+We extracted a comprehensive set of sequence-derived regulatory features from 5′ and 3′ UTRs to construct the machine learning input space.
+
+This includes:
+
+- Enumeration of all possible k-mers (4^k)
+- Frequency-based k-mer feature matrix construction
+- Positional k-mer distribution metrics
+- Identification of enriched and depleted sequence motifs
+- Secondary structure–related sequence characteristics
+- AU-rich and polyadenylation-associated elements
+- Region-specific feature derivation (5′UTR, 3′UTR, and combined architectures)
+
+These features collectively capture both compositional and positional regulatory information embedded within UTR sequence architecture.
+
+### 2. Classification Analysis
+
+Models were trained independently on:
+
+- 5′UTR k-mers  
+- 3′UTR k-mers  
+- Combined UTR k-mers  
+
+**Objective:**  
+Evaluate whether sequence composition and regulatory features distinguish translational states.
+
+### 3. Regression Modeling
+
+Using gradient-boosted regression (XGBoost):
+
+- Predict continuous translational metrics (e.g., ΔTE)
+- Capture nonlinear motif interactions
+- Assess region-specific versus integrated regulatory architecture
+- Rank regulatory features by relative importance
+
+### 4. Bi-modality Analysis
+
+We evaluated whether translational output reflects:
+
+- Continuous modulation  
+- Or discrete regulatory regimes encoded in sequence composition  
+
+This analysis tests whether translational control operates as a graded continuum or as structured regulatory states.
+
+---
+
+## Repository Contents
+
+- `mol_cell_main_version_17.9.25.ipynb` — Full reproducible analysis pipeline  
+- `TIFs_PP2.csv` — Dataset used for modeling  
+- `requirements.txt` — Python dependencies  
+- `README.md` — Project description  
 
 ---
 
 ## Reproducibility
 
-All analyses are fully reproducible.  
-Dependencies are listed in `requirements.txt` (or `environment.yml`).  
-The notebook can be executed sequentially to regenerate all results and figures.
+All analyses can be reproduced by executing:
+
+`mol_cell_main_version_17.9.25.ipynb`
+
+To recreate the computational environment:
+
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
-## Intended Audience
+## Code Availability
 
-This repository is intended for researchers in:
+This repository contains the complete computational workflow used to generate the results reported in the associated manuscript.
 
-- Translational regulation
-- RNA biology
-- Computational genomics
-- Machine learning applications in molecular biology
+A versioned release of this repository has been archived via Zenodo and assigned a DOI to ensure long-term preservation and citation.
 
 ---
 
-## Citation
+## Conceptual Summary
 
-If using this code or dataset, please cite the associated manuscript.
+This study investigates how primary sequence architecture encodes translational regulation.
+
+By modeling k-mer composition and regulatory features, we test whether:
+
+- Regulatory information is embedded directly within UTR nucleotide patterns  
+- Translational states reflect encoded motif grammar  
+- Coordinated 5′–3′ architecture defines regulatory identity  
+
+The results provide a framework linking nucleotide-level sequence logic to translational phenotypes.
