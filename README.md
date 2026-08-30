@@ -81,7 +81,7 @@ This analysis tests whether translational control operates as a graded continuum
 - `TIFs_PP2.csv` — Dataset used for modeling
 - `models/` — Trained models, ready to load and use (see below)
 - `examples/predict_new_transcript.ipynb` — Runnable example: load each model and generate a prediction
-- `pipeline_input_scripts_and_dependencies/` — Scripts documenting exactly how each trained model was built and validated, plus supporting documentation
+- `pipeline_input_scripts_and_dependencies/` — Scripts documenting exactly how each trained model was built and validated
 - `requirements.txt` / `environment.yml` — Python dependencies (pip and conda)
 - `LICENSE` — MIT license
 - `CITATION.cff` — Citation metadata
