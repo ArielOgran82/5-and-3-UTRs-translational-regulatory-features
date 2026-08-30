@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: "If you use this software or the trained models, please cite the associated publication."
+type: software
+title: "5' and 3' UTR translational regulatory features: ML pipeline and trained models"
+abstract: >
+  Machine learning pipeline for discovering translation regulatory features
+  and cross-UTR interactions from TIF-seq2 transcript isoform data, developed
+  for the manuscript "Discovery of Translation Regulatory Features and
+  Cross-UTR Interactions through Precise Mapping of mRNA Ends and Machine
+  Learning."
+authors:
+  - family-names: Ogran
+    given-names: Ariel
+    affiliation: "Dept. of Biomolecular Sciences, The Weizmann Institute of Science, Rehovot 7610001, Israel"
+  - family-names: Green
+    given-names: Joseph
+    affiliation: "Dept. of Biomolecular Sciences, The Weizmann Institute of Science, Rehovot 7610001, Israel"
+  - family-names: Hayat
+    given-names: Daniel
+    affiliation: "Dept. of Biomolecular Sciences, The Weizmann Institute of Science, Rehovot 7610001, Israel"
+  - family-names: Sinha
+    given-names: Sansrity
+    affiliation: "Dept. of Biomolecular Sciences, The Weizmann Institute of Science, Rehovot 7610001, Israel"
+  - family-names: Avinoam
+    given-names: Ori
+    affiliation: "Dept. of Biomolecular Sciences, The Weizmann Institute of Science, Rehovot 7610001, Israel"
+  - family-names: Azuri
+    given-names: Ido
+    affiliation: "Dept. of Life Sciences Core Facilities, Bioinformatics Unit, The Weizmann Institute of Science, Rehovot 7610001, Israel"
+  - family-names: Dikstein
+    given-names: Rivka
+    email: rivka.dikstein@weizmann.ac.il
+    affiliation: "Dept. of Biomolecular Sciences, The Weizmann Institute of Science, Rehovot 7610001, Israel"
+repository-code: "https://github.com/ArielOgran82/5-and-3-UTRs-translational-regulatory-features"
+license: MIT
+version: "1.1"
+date-released: "2026-08-30"
+# doi: "10.5281/zenodo.XXXXXXX"  # fill in once the Zenodo release is created (see docs)
+# preferred-citation:  # fill in once the manuscript has a DOI/journal record
+#   type: article
+#   title: "Discovery of Translation Regulatory Features and Cross-UTR Interactions through Precise Mapping of mRNA Ends and Machine Learning"
+#   journal: "Nucleic Acids Research"
+#   year: 2026

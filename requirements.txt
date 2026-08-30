@@ -1,0 +1,21 @@
+# Python dependencies for reproducing the analyses in
+# mol_cell_main_version_17.9.25.ipynb, loading the trained models in
+# models/, and running examples/predict_new_transcript.ipynb and the
+# scripts in pipeline_input_scripts_and_dependencies/.
+#
+# Install with: pip install -r requirements.txt
+# Tested with Python 3.9.
+
+numpy>=1.25
+pandas>=2.1
+scikit-learn>=1.5
+scipy>=1.9
+statsmodels>=0.14
+xgboost>=2.1
+matplotlib>=3.9
+networkx>=3.2
+tqdm>=4.70
+nbformat>=5.10
+nbclient>=0.10
+jupyter>=1.0
+ipykernel>=6.29

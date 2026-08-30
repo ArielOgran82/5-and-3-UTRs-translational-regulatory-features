@@ -77,10 +77,29 @@ This analysis tests whether translational control operates as a graded continuum
 
 ## Repository Contents
 
-- `mol_cell_main_version_17.9.25.ipynb` — Full reproducible analysis pipeline  
-- `TIFs_PP2.csv` — Dataset used for modeling  
-- `requirements.txt` — Python dependencies  
-- `README.md` — Project description  
+- `mol_cell_main_version_17.9.25.ipynb` — Full reproducible analysis pipeline
+- `TIFs_PP2.csv` — Dataset used for modeling
+- `models/` — Trained models, ready to load and use (see below)
+- `examples/predict_new_transcript.ipynb` — Runnable example: load each model and generate a prediction
+- `pipeline_input_scripts_and_dependencies/` — Scripts documenting exactly how each trained model was built and validated, plus supporting documentation
+- `requirements.txt` / `environment.yml` — Python dependencies (pip and conda)
+- `LICENSE` — MIT license
+- `CITATION.cff` — Citation metadata
+- `README.md` — Project description
+
+---
+
+## Trained Models
+
+Five trained models are provided in `models/`, covering the regulatory-only,
+pure k-mer, bi-modal, XGBoost regression, and Figure-6-combination model
+families described in the manuscript. Each model's exact feature set,
+preprocessing pipeline, held-out performance, and known limitations are
+documented in `models/model_metadata.json` — read this before using any
+model, since they are **not interchangeable in what input they require**
+(some need only a raw sequence; others need a full precomputed feature row
+from the TIF-seq2 pipeline). `examples/predict_new_transcript.ipynb`
+demonstrates correct usage of every model.
 
 ---
 
@@ -94,15 +113,23 @@ To recreate the computational environment:
 
 ```bash
 pip install -r requirements.txt
+# or: conda env create -f environment.yml
 ```
+
+To use the trained models without retraining, see
+`examples/predict_new_transcript.ipynb`.
 
 ---
 
 ## Code Availability
 
-This repository contains the complete computational workflow used to generate the results reported in the associated manuscript.
+This repository contains the complete computational workflow, the trained
+models, and a runnable usage example needed to reproduce and reuse the
+results reported in the associated manuscript.
 
-A versioned release of this repository has been archived via Zenodo and assigned a DOI to ensure long-term preservation and citation.
+A versioned release of this repository is archived via Zenodo, providing a
+persistent DOI for long-term preservation and citation (see `CITATION.cff`
+for the DOI once assigned).
 
 ---
 
