@@ -1,5 +1,5 @@
 # Python dependencies for reproducing the analyses in
-# mol_cell_main_version_17.9.25.ipynb, loading the trained models in
+# NAR_main_version_30.8.26.ipynb, loading the trained models in
 # models/, and running examples/predict_new_transcript.ipynb and the
 # scripts in pipeline_input_scripts_and_dependencies/.
 #

@@ -11,7 +11,7 @@ Retrain the 2 models that were never pickled in the original notebook:
      feature set as the already-saved bi-modal RF classifier (Fig 4A/C).
 
 Verbatim-ported functions/pipeline from the GitHub repo notebook
-(mol_cell_main_version_17.9.25.ipynb), split 0 (seed 42), to match the
+(NAR_main_version_30.8.26.ipynb), split 0 (seed 42), to match the
 already-published methodology.
 """
 import pickle

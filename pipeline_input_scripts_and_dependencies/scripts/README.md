@@ -19,7 +19,7 @@ every historical intermediate pickle is impractical and unnecessary once the
 final models are already published in `models/`.
 
 **The fully reproducible entry points in this repository are:**
-- `mol_cell_main_version_17.9.25.ipynb` — the complete original analysis notebook.
+- `NAR_main_version_30.8.26.ipynb` — the complete original analysis notebook.
 - `models/` — the final trained models, each with a documented preprocessing pipeline.
 - `examples/predict_new_transcript.ipynb` — runs end-to-end from this repository alone, no external dependencies.
 

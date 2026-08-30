@@ -77,7 +77,7 @@ This analysis tests whether translational control operates as a graded continuum
 
 ## Repository Contents
 
-- `mol_cell_main_version_17.9.25.ipynb` — Full reproducible analysis pipeline
+- `NAR_main_version_30.8.26.ipynb` — Full reproducible analysis pipeline
 - `TIFs_PP2.csv` — Dataset used for modeling
 - `models/` — Trained models, ready to load and use (see below)
 - `examples/predict_new_transcript.ipynb` — Runnable example: load each model and generate a prediction
@@ -107,7 +107,7 @@ demonstrates correct usage of every model.
 
 All analyses can be reproduced by executing:
 
-`mol_cell_main_version_17.9.25.ipynb`
+`NAR_main_version_30.8.26.ipynb`
 
 To recreate the computational environment:
 
